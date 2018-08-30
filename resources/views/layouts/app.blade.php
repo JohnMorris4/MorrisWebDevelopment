@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,72 +8,48 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <title>MorrisWebDev</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
+            <nav class="navbar has-shadow">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="{{route('home')}}">
+                            <img src="{{asset('images/morris.png')}}" alt="Morris Web Development">
+                        </a>
+                        <a href="/create" class="navbar-item is-tab is-hidden-mobile m-l-10">Create</a>
+                        <a href="/share" class="navbar-item is-tab is-hidden-mobile">Share</a>
+                        <a href="/post" class="navbar-item is-tab is-hidden-mobile">Blog</a>
+                        <a href="/about" class="navbar-item is-tab is-hidden-mobile">About</a>
+                        <a href="/contact" class="navbar-item is-tab is-hidden-mobile">Contact</a>
+                    </div>
+                    <div class="navbar-end nav-menu">
+                        @if(!Auth::guest())
+                            <a href="" class="navbar-item is-tab">Login</a>
+                            <a href="" class="navbar-item is-tab">Register</a>
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                            <button class="has-dropdown navbar-item is-tab">
+                                Good Day John <span class="icon"><i class="fa fa-caret-down"></i></span>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Profile</a></li>
+                                    <li><a href="">Notifications</a></li>
+                                    <li><a href="">Settings</a></li>
+                                    <li class="seperator"></li>
+                                    <li><a href="">Logout</a></li>
+                                </ul>
+                            </button>
+                        @endif
+                    </div>
                 </div>
-            </div>
-        </nav>
-
-        <main class="py-4">
+            </nav>
             @yield('content')
         </main>
     </div>
+    <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>

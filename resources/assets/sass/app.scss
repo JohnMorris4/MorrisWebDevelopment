@@ -1,6 +1,6 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+// @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 // Variables
 @import 'variables';
@@ -15,8 +15,8 @@
 // Buefy
 @import 'node_modules/buefy/src/scss/buefy';
 
+// Custom scss files
+@import "overrides";
+@import "helpers";
+@import "styles";
 
-.navbar-laravel {
-  background-color: cornsilk;
-  box-shadow: 0 2px 4px rgba(0, 0, .04, 0.04);
-}
