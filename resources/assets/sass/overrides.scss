@@ -102,3 +102,21 @@ button.dropdown {
    .nav {
        height: 4.5rem;
    }
+   .fa-caret-down{
+       text-size-adjust: 100%;
+       margin-top: -5px;
+       color: whitesmoke;
+   }
+   .user {
+       font-size: 16px;
+       color: whitesmoke;
+   }
+
+.is-muted {
+    color: $grey-light !important;
+}
+a.is-muted:hover{
+    color: #777 !important;
+}
+
+

@@ -28,18 +28,27 @@
                         <a href="/contact" class="navbar-item is-tab is-hidden-mobile">Contact</a>
                     </div>
                     <div class="navbar-end nav-menu">
-                        @if(!Auth::guest())
-                            <a href="" class="navbar-item is-tab">Login</a>
-                            <a href="" class="navbar-item is-tab">Register To Join In</a>
+                        @if(Auth::guest())
+                            <a href="{{route('login')}}" class="navbar-item is-tab">Login</a>
+                            <a href="{{route('register')}} " class="navbar-item is-tab">Register To Join In</a>
                         @else
-                            <button class="dropdown is-aligned-right nav-item is-open is-tab"> Hey John <span class="icon"><i class="fa fa-caret-down"></i></span>
+                            <button class="dropdown is-aligned-right nav-item is-tab"><span class="user">Hey John</span>
+                                <span class="icon"><i class="fa fa-caret-down"></i></span>
 
-                                <ul class="dropdown-menu">
-                                    <li><a href="">Profile</a></li>
-                                    <li><a href="">Notifications</a></li>
-                                    <li><a href="">Settings</a></li>
+                                <ul class="dropdown-menu" style="overflow: visable;">
+                                    <li><a href=""><span class="icon">
+                          <i class="fa fa-fw fa-user-circle-o m-r-5"></i>
+                        </span> Profile</a></li>
+                                    <li><a href=""><span class="icon">
+                          <i class="fa fa-fw fa-bell m-r-5"></i>
+                        </span>Notifications</a></li>
+                                    <li><a href=""><span class="icon">
+                          <i class="fa fa-fw fa-cog m-r-5"></i>
+                        </span>Settings</a></li>
                                     <li class="seperator"></li>
-                                    <li><a href="">Logout</a></li>
+                                    <li><a href=""><span class="icon">
+                          <i class="fa fa-fw fa-sign-out m-r-5"></i>
+                        </span>Logout</a></li>
                                 </ul>
                             </button>
                         @endif

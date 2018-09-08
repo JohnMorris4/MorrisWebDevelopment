@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway);@charset "UTF-8";
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -17646,6 +17646,28 @@ button.nav-item.is-active {
   height: 4.5rem;
 }
 
+.fa-caret-down {
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  margin-top: -5px;
+  color: whitesmoke;
+}
+
+.user {
+  font-size: 16px;
+  color: whitesmoke;
+}
+
+.is-muted {
+  color: #b5b5b5 !important;
+}
+
+a.is-muted:hover {
+  color: #777 !important;
+}
+
 .m-t-5 {
   margin-top: 5px !important;
 }
@@ -18028,5 +18050,13 @@ button.nav-item.is-active {
 
 .p-r-100 {
   padding-right: 100px !important;
+}
+
+body {
+  font-family: Raleway;
+}
+
+.bottom {
+  font-size: 1.3rem;
 }
 

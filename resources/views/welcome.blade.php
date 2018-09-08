@@ -8,9 +8,9 @@
         <title>MorrisWebDev</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:200,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:200, 300,600" rel="stylesheet" type="text/css">
 
-        
+
     </head>
     <body>
         <div class="flex-center position-ref full-height">
