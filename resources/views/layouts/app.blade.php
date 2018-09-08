@@ -18,7 +18,7 @@
             <nav class="navbar has-shadow">
                 <div class="container">
                     <div class="navbar-brand">
-                        <a class="navbar-item" href="{{route('home')}}">
+                        <a class="nav-item" href="{{route('home')}}">
                             <img src="{{asset('images/morris.png')}}" alt="Morris Web Development">
                         </a>
                         <a href="/create" class="navbar-item is-tab is-hidden-mobile m-l-10">Create</a>
@@ -30,10 +30,9 @@
                     <div class="navbar-end nav-menu">
                         @if(!Auth::guest())
                             <a href="" class="navbar-item is-tab">Login</a>
-                            <a href="" class="navbar-item is-tab">Register</a>
+                            <a href="" class="navbar-item is-tab">Register To Join In</a>
                         @else
-                            <button class="has-dropdown navbar-item is-tab">
-                                Good Day John <span class="icon"><i class="fa fa-caret-down"></i></span>
+                            <button class="dropdown is-aligned-right nav-item is-open is-tab"> Hey John <span class="icon"><i class="fa fa-caret-down"></i></span>
 
                                 <ul class="dropdown-menu">
                                     <li><a href="">Profile</a></li>
