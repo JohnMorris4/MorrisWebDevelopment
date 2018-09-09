@@ -8,14 +8,17 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>MorrisWebDev</title>
+    <title>MorrisWebDev - Management Console</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+
+     @include('_includes.nav.main_nav')
+     @include('_includes.nav.aside_nav')
+
     <div id="app">
-            @include('_includes.nav.main_nav')
             @yield('content')
         </main>
     </div>

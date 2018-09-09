@@ -17,4 +17,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//Just to the backend of the site
+//Route Group
+Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor')->group(function() {
+    Route::get('/', 'ManagementController@home');
+    Route::get('/dashboard', 'ManagementController@dashboard')->name('manage.dashboard');
+});
+
 Route::get('/home', 'HomeController@index')->name('home');

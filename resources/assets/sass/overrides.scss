@@ -5,6 +5,7 @@
 
    .dropdown-menu {
        box-shadow: 0 0 8px #777;
+       background-color: white;
        display: none;
        left: 0;
        position: absolute;
@@ -44,7 +45,7 @@
        right: 0;
    }
 .navbar {
-    background-color: lightblue;
+    background-color: $blue;
 }
 button.dropdown {
     color: whitesmoke;
