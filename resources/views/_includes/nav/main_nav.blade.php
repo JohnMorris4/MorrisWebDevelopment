@@ -28,7 +28,7 @@
                                     <li><a href=""><span class="icon">
                           <i class="fa fa-fw fa-cog m-r-5"></i>
                         </span>Settings</a></li>
-                        <li><a href="{{route('manage.dashboard')}}"><span class="icon"><i class="fa fa-fw fa-cog m-r-5"></i></span>
+                        <li><a href="{{route('users.index')}}"><span class="icon"><i class="fa fa-fw fa-cog m-r-5"></i></span>
                             Manage
                         </a></li>
                                     <li class="seperator"></li>

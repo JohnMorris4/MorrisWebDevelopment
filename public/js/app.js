@@ -988,7 +988,10 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
 // Vue.component('example', require('./components/Example.vue'));
 var app = new Vue({
     el: '#app',
-    data: {}
+    data: {
+        auto_password: true,
+        password_options: 'keep'
+    }
 });
 $(document).ready(function () {
     $('button.dropdown').hover(function (e) {
